@@ -18,11 +18,8 @@ export default function Home() {
           </div>
         </div>
 
-        <img 
-          src="https://i.imgur.com/5G5P7uS.png"
-          alt="train"
-          className="hero-img"
-        />
+        
+      
       </section>
 
       <section className="features">
