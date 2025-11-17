@@ -1,0 +1,62 @@
+.tb-container {
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.tb-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.tb-box {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.tb-group {
+  margin-top: 12px;
+}
+
+.tb-group label {
+  font-size: 14px;
+}
+
+.tb-group input {
+  width: 100%;
+  padding: 9px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* SWAP BUTTON */
+.tb-swap {
+  margin-top: 10px;
+  padding: 6px 12px;
+  border: none;
+  background: #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* SEARCH BUTTON */
+.tb-btn {
+  width: 100%;
+  padding: 10px;
+  background: #e63946;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+/* INFO SECTION */
+.tb-info {
+  margin-top: 20px;
+  color: #555;
+  font-size: 14px;
+}

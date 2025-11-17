@@ -1,0 +1,119 @@
+.help-container {
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+/* Titles */
+.help-title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.help-subtitle {
+  font-size: 14px;
+  margin-top: 4px;
+  opacity: 0.7;
+}
+
+/* FAQ SECTION */
+.faq-section {
+  margin-top: 20px;
+}
+
+.faq-section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.faq-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.faq-answer {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  margin-top: 25px;
+}
+
+.contact-options {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.contact-card {
+  flex: 1;
+  min-width: 160px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  padding: 14px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.contact-card span {
+  font-size: 30px;
+}
+
+.contact-card h3 {
+  margin-top: 6px;
+  font-size: 16px;
+}
+
+.contact-card p {
+  margin-top: 4px;
+  font-size: 13px;
+  color: #666;
+}
+
+.contact-card button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  background: #e63946;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+/* COMPLAINT SECTION */
+.complaint-section {
+  margin-top: 25px;
+}
+
+.complaint-section textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.submit-btn {
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: #e63946;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

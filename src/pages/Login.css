@@ -1,0 +1,82 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 330px;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 18px;
+  border-radius: 8px;
+}
+
+.login-title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.login-subtitle {
+  font-size: 14px;
+  margin-top: 4px;
+  color: #666;
+}
+
+/* INPUT GROUP */
+.login-group {
+  margin-top: 15px;
+}
+
+.login-group label {
+  font-size: 14px;
+}
+
+.login-group input {
+  width: 100%;
+  padding: 9px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* PASSWORD BOX */
+.password-box {
+  position: relative;
+}
+
+.toggle-pass {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background: #e63946;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+/* BOTTOM LINK */
+.login-bottom-text {
+  text-align: center;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.login-link {
+  color: #e63946;
+  cursor: pointer;
+  font-weight: 600;
+}

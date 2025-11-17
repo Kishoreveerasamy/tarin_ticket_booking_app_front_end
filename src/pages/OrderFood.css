@@ -1,0 +1,82 @@
+.food-container {
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.food-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.food-subtitle {
+  font-size: 14px;
+  margin-top: 4px;
+  color: #666;
+}
+
+/* MAIN BOX */
+.food-box {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.food-part h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.food-part input {
+  width: 100%;
+  padding: 9px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-top: 8px;
+}
+
+.food-or {
+  text-align: center;
+  margin: 12px 0;
+  font-weight: 600;
+}
+
+/* SEARCH BTN */
+.food-btn {
+  width: 100%;
+  padding: 10px;
+  background: #e63946;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+/* POPULAR CATEGORIES */
+.food-small-title {
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+.food-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.cat {
+  padding: 8px 14px;
+  background: #f2f2f2;
+  border-radius: 6px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+}
+
+/* RESTAURANT NOTE */
+.food-note {
+  font-size: 14px;
+  margin-top: 8px;
+  color: #555;
+}

@@ -1,0 +1,81 @@
+.mm-header {
+  height: 50px;
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ 
+  border-bottom: 1px solid #eee;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+padding: 2px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* LEFT SECTION */
+.mm-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.mm-logo {
+  font-size: 28px;
+}
+
+.mm-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #d9372a;  /* Red theme */
+}
+
+/* CENTER NAV */
+.mm-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.mm-nav a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #444;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.mm-nav a:hover {
+  color: #d9372a;
+  text-decoration: underline;
+}
+
+/* RIGHT SECTION */
+.mm-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.mm-icon {
+  text-decoration: none;
+  color: #444;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.mm-icon:hover {
+  color: #d9372a;
+}
+
+
+.mm-nav p, .mm-right p {
+  cursor: pointer;
+  user-select: none;       /* stops text selection */
+  transition: 0.2s ease;
+}
+
+.mm-nav p:hover, .mm-right p:hover {
+  color: #d9372a;
+}
