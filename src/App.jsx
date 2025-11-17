@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 
 import Home from "./pages/Home";
@@ -12,7 +12,7 @@ import Account from "./pages/Account";
 
 export default function App() {
   return (
-    <BrowserRouter basename="/train_ticket_booking_app">
+    <>
       <Header />
 
       <Routes>
@@ -25,6 +25,6 @@ export default function App() {
         <Route path="/my-bookings" element={<MyBookings />} />
         <Route path="/account" element={<Account />} />
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
