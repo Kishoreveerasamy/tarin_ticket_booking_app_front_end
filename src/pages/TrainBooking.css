@@ -1,62 +1,44 @@
-.tb-container {
+.train-booking {
   padding: 20px;
-  font-family: "Inter", sans-serif;
+  max-width: 700px;
+  margin: auto;
 }
 
-.tb-title {
-  font-size: 24px;
-  font-weight: 600;
+.search-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-.tb-box {
+.search-container input, 
+.search-container button {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.train-card {
   border: 1px solid #ddd;
   padding: 15px;
+  margin-bottom: 15px;
   border-radius: 8px;
-  margin-top: 15px;
 }
 
-.tb-group {
-  margin-top: 12px;
+.train-card h3 {
+  margin: 0 0 10px;
 }
 
-.tb-group label {
-  font-size: 14px;
-}
-
-.tb-group input {
-  width: 100%;
-  padding: 9px;
-  margin-top: 5px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-/* SWAP BUTTON */
-.tb-swap {
-  margin-top: 10px;
-  padding: 6px 12px;
+.book-btn {
+  background: #007bff;
   border: none;
-  background: #ccc;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-/* SEARCH BUTTON */
-.tb-btn {
-  width: 100%;
-  padding: 10px;
-  background: #e63946;
   color: white;
-  border: none;
-  border-radius: 6px;
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
   cursor: pointer;
-  margin-top: 15px;
-  font-size: 15px;
+  border-radius: 5px;
 }
 
-/* INFO SECTION */
-.tb-info {
-  margin-top: 20px;
-  color: #555;
-  font-size: 14px;
+.no-results {
+  text-align: center;
+  color: #777;
 }

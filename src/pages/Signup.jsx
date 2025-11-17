@@ -1,31 +1,35 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "./Signup.css";
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+import "./Signup.css"
 
 export default function Signup() {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
-  const [confirm, setConfirm] = useState("");
-  const [show, setShow] = useState(false);
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+
+
+  const [pass, setPass] = useState("")
+  const [confirm, setConfirm] = useState("")
+  const [show, setShow] = useState(false)
+
 
   function signup() {
     if (name === "" || email === "" || pass === "" || confirm === "") {
-      alert("Please fill all fields");
-      return;
+      alert("Please fill all fields")
+      return
     }
 
     if (pass !== confirm) {
-      alert("Passwords do not match");
-      return;
+      alert("Passwords do not match")
+      return
     }
 
     // temporary token save
-    localStorage.setItem("token", "sample_user_token");
+    localStorage.setItem("token", "sample_user_token")
 
-    navigate("/");
+
+    navigate("/")
   }
 
   return (
@@ -34,6 +38,10 @@ export default function Signup() {
 
         <h2 className="signup-title">Create Account</h2>
         <p className="signup-subtitle">Join us today</p>
+
+
+
+
 
         <div className="signup-group">
           <label>Name</label>
@@ -55,6 +63,10 @@ export default function Signup() {
           />
         </div>
 
+
+
+
+
         <div className="signup-group">
           <label>Password</label>
 
@@ -71,6 +83,10 @@ export default function Signup() {
           </div>
         </div>
 
+
+
+
+
         <div className="signup-group">
           <label>Confirm Password</label>
           <input
@@ -82,8 +98,7 @@ export default function Signup() {
         </div>
 
         <button className="signup-btn" onClick={signup}>
-          Create Account
-        </button>
+          Create Account</button>
 
         <p className="signup-bottom-text">
           Already have an account?{" "}
@@ -92,7 +107,8 @@ export default function Signup() {
           </span>
         </p>
 
+
       </div>
     </div>
-  );
+  )
 }

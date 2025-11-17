@@ -1,29 +1,36 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "./Login.css";
+import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+import "./Login.css"
 
 export default function Login() {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [show, setShow] = useState(false);
+
+
+  const [email, setEmail] = useState("")
+
+  const [password, setPassword] = useState("")
+
+  const [show, setShow] = useState(false)
 
   function login() {
     if (email === "" || password === "") {
-      alert("Please enter email and password");
-      return;
+      alert("Please enter email and password")
+      return
     }
 
     // store temporary token
-    localStorage.setItem("token", "sample_token_123");
+    localStorage.setItem("token", "sample_token_123")
 
-    navigate("/");
+
+    navigate("/")
   }
 
   return (
     <div className="login-container">
       <div className="login-card">
+
+
         <h2 className="login-title">Welcome Back 👋</h2>
         <p className="login-subtitle">Login to continue</p>
 
@@ -31,6 +38,7 @@ export default function Login() {
           <label>Email / Mobile</label>
           <input
             type="text"
+            
             placeholder="Enter email or mobile"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -69,5 +77,5 @@ export default function Login() {
         </p>
       </div>
     </div>
-  );
+  )
 }

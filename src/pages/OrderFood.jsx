@@ -1,34 +1,38 @@
-import { useState } from "react";
-import "./OrderFood.css";
+import { useState } from "react"
+import "./OrderFood.css"
 
 export default function OrderFood() {
-  const [pnr, setPnr] = useState("");
-  const [train, setTrain] = useState("");
-  const [date, setDate] = useState("");
-  const [station, setStation] = useState("");
+  const [pnr, setPnr] = useState("")
+  const [train, setTrain] = useState("")
+  const [date, setDate] = useState("")
+  const [station, setStation] = useState("")
 
   function search() {
     if (!pnr && (!train || !date || !station)) {
-      alert("Enter PNR OR Train + Date + Station");
-      return;
+      alert("Enter PNR OR Train + Date + Station")
+      return
     }
 
-    console.log("Searching...", { pnr, train, date, station });
+    console.log("Searching...", { pnr, train, date, station })
   }
 
   return (
     <div className="food-container">
       
+
       <h2 className="food-title">Order Food in Train</h2>
       <p className="food-subtitle">Get fresh food delivered to your seat</p>
 
       <div className="food-box">
 
         {/* PNR SEARCH */}
+
+
         <div className="food-part">
           <h3>Search by PNR</h3>
           <input 
             type="text" 
+
             placeholder="Enter PNR"
             value={pnr}
             onChange={(e) => setPnr(e.target.value)}
@@ -44,6 +48,8 @@ export default function OrderFood() {
           <input 
             type="text" 
             placeholder="Train Number"
+
+
             value={train}
             onChange={(e) => setTrain(e.target.value)}
           />
@@ -58,6 +64,7 @@ export default function OrderFood() {
             type="text" 
             placeholder="Boarding Station"
             value={station}
+
             onChange={(e) => setStation(e.target.value)}
           />
         </div>
@@ -69,9 +76,12 @@ export default function OrderFood() {
 
       <div className="food-categories">
         <div className="cat">Pizza</div>
+
+
         <div className="cat">Meals</div>
         <div className="cat">Chinese</div>
         <div className="cat">Burgers</div>
+        
         <div className="cat">Drinks</div>
         <div className="cat">Snacks</div>
       </div>
@@ -80,5 +90,5 @@ export default function OrderFood() {
       <p className="food-note">Search to see restaurants for your train.</p>
 
     </div>
-  );
+  )
 }

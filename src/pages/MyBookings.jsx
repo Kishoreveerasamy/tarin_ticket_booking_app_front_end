@@ -1,4 +1,4 @@
-import "./MyBookings.css";
+import "./MyBookings.css"
 
 export default function MyBookings() {
   // Simple dummy data
@@ -9,14 +9,23 @@ export default function MyBookings() {
       trainNo: "12623",
       from: "Chennai",
       to: "Delhi",
+
+
       date: "2025-01-25",
       time: "06:15 AM",
+
       seats: 2,
       status: "Confirmed",
     },
+
+
+
+
     {
       id: "BK10232",
       train: "Coimbatore Intercity",
+
+
       trainNo: "22666",
       from: "Coimbatore",
       to: "Chennai",
@@ -25,7 +34,14 @@ export default function MyBookings() {
       seats: 1,
       status: "Pending",
     },
-  ];
+  ]
+
+
+
+
+
+
+
 
   return (
     <div className="mb-container">
@@ -38,17 +54,21 @@ export default function MyBookings() {
           <div className="mb-left">
             <h3>{item.train} ({item.trainNo})</h3>
 
+
             <p>{item.from} → {item.to}</p>
             <p>Date: {item.date}</p>
             <p>Time: {item.time}</p>
             <p>Seats: {item.seats}</p>
           </div>
 
+
+
           {/* RIGHT */}
           <div className="mb-right">
             <div className={`mb-status ${item.status.toLowerCase()}`}>
               {item.status}
             </div>
+            
 
             <button className="mb-btn">View Ticket</button>
           </div>
@@ -56,5 +76,5 @@ export default function MyBookings() {
         </div>
       ))}
     </div>
-  );
+  )
 }

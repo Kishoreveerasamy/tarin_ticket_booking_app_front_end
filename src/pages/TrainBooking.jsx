@@ -1,71 +1,93 @@
-import { useState } from "react";
-import "./TrainBooking.css";
+import { useState } from "react"
+import "./TrainBooking.css"
 
 export default function TrainBooking() {
-  const [from, setFrom] = useState("");
-  const [to, setTo] = useState("");
-  const [date, setDate] = useState("");
+  const [from, setFrom] = useState("")
+  const [to, setTo] = useState("")
 
-  function swap() {
-    const temp = from;
-    setFrom(to);
-    setTo(temp);
+
+  const [date, setDate] = useState("")
+  const [trains, setTrains] = useState([])
+
+  const generateRandomTime = () => {
+    const hours = Math.floor(Math.random() * 12) + 1
+    const minutes = ["00", "15", "30", "45"][Math.floor(Math.random() * 4)]
+
+
+    const ampm = Math.random() > 0.5 ? "AM" : "PM"
+    return `${hours}:${minutes} ${ampm}`
   }
 
-  function search() {
-    if (from === "" || to === "" || date === "") {
-      alert("Please enter all fields");
-      return;
+  const handleSearch = () => {
+    if (!from || !to || !date) {
+      alert("Enter From, To, and Date")
+      return
     }
 
-    console.log("Searching trains...", { from, to, date });
+    const generatedTrains = Array.from({ length: 5 }, () => ({
+      id: Date.now() + Math.random(),
+
+      number: Math.floor(10000 + Math.random() * 90000), 
+      name: `${from} - ${to} Express`,
+      from: from,
+      to: to,
+
+      date: date,
+      time: generateRandomTime(),
+      price: Math.floor(150 + Math.random() * 900),
+    }))
+
+    setTrains(generatedTrains)
   }
 
   return (
-    <div className="tb-container">
-      <h2 className="tb-title">Search Trains</h2>
+    <div className="train-booking">
+      <h1>🚆 Train Ticket Booking</h1>
 
-      <div className="tb-box">
+      <div className="search-container">
 
-        <div className="tb-group">
-          <label>From</label>
-          <input
-            type="text"
-            placeholder="Source station"
-            value={from}
-            onChange={(e) => setFrom(e.target.value)}
-          />
-        </div>
+        <input
+          type="text"
+          placeholder="From"
+          value={from}
+          onChange={(e) => setFrom(e.target.value)}
+        />
 
-        <button className="tb-swap" onClick={swap}>Swap</button>
+        <input
+          type="text"
+          placeholder="To"
+          value={to}
+          onChange={(e) => setTo(e.target.value)}
+        />
 
-        <div className="tb-group">
-          <label>To</label>
-          <input
-            type="text"
-            placeholder="Destination station"
-            value={to}
-            onChange={(e) => setTo(e.target.value)}
-          />
-        </div>
+        <input
+          type="date"
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+        />
 
-        <div className="tb-group">
-          <label>Date</label>
-          <input
-            type="date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-          />
-        </div>
-
-        <button className="tb-btn" onClick={search}>Search</button>
+        <button onClick={handleSearch}>Search</button>
       </div>
 
-      <div className="tb-info">
-        <p>Fast and secure train booking</p>
-        <p>IRCTC partnered service</p>
-        <p>Live updates supported</p>
+      <div className="train-list">
+        {trains.length === 0 ? (
+          <p className="no-results">Enter locations to view trains.</p>
+        ) : (
+          trains.map((train) => (
+            <div className="train-card" key={train.id}>
+              <h3>{train.number} - {train.name}</h3>
+              <p><strong>Route:</strong> {train.from} → {train.to}</p>
+              <p><strong>Date:</strong> {train.date}</p>
+
+              
+              <p><strong>Time:</strong> {train.time}</p>
+              <p><strong>Price:</strong> ₹{train.price}</p>
+
+              <button className="book-btn">Book Now</button>
+            </div>
+          ))
+        )}
       </div>
     </div>
-  );
+  )
 }
